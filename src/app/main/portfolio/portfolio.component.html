@@ -1,0 +1,16 @@
+<div 
+  class="entire-page"
+  [@pageAppearTrigger]>
+  <h1 id="portfolio-heading">Portfolio items</h1>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let item of items" class="col-md-4">
+        <article 
+          [@portfolioItemTrigger] 
+          class="portfolio-item">
+          <h1>{{item}}</h1>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

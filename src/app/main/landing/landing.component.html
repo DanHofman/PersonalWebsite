@@ -1,0 +1,36 @@
+<div class="container-fluid main-container">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <article 
+        [@changePagePortfolio] = 'linkStates["portfolio"]'
+        #portfolio 
+        (click)="changePage('portfolio')"
+        id="portfolio" 
+        class="link-box top left">
+        <h1>portfolio</h1>
+      </article>
+    </div>
+    <div class="col-md-6">
+      <article id="writing" class="link-box top right">
+        <h1>writing</h1>
+      </article>
+    </div>
+  </div>
+  <div id="name-container" class="row">
+    <h1 id="name-header">DH</h1>
+    <hr id="name-line">
+    <h4 id="name-description">Developer | Writer | Musician</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <article id="about" class="link-box bottom left">
+        <h1>about</h1>
+      </article>
+    </div>
+    <div class="col-md-6">
+      <article id="contact" class="link-box bottom right">
+        <h1>contact</h1>
+      </article>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+:host {
+    display: block;
+    background: linear-gradient(90deg, lightskyblue, deepskyblue);
+    height: 100%;
+}
+
+.portfolio-item {
+    height: 300px;
+    margin: 20px;
+    background: linear-gradient(45deg, red, crimson);
+    box-shadow: 3px 3px 3px black;
+    text-align: center;
+}
+
+.portfolio-item h1 {
+    padding-top: 35%;
+}
+
+#portfolio-heading {
+    background: linear-gradient(180deg, orange, darkorange);
+    margin-top: 0px;
+    padding: 10px 0px;
+    border-bottom: 2px solid crimson;
+}

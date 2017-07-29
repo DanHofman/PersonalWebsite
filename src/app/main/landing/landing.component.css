@@ -1,0 +1,202 @@
+:host {
+    display: block;
+    height: 100vh;
+    background: linear-gradient(45deg, lightskyblue, deepskyblue);
+}
+.main-container {
+    position: relative;
+}
+.link-box {
+    height: 350px;
+    width: 350px;
+    background: linear-gradient(45deg, darkred, crimson);
+    display: inline-block;
+    color: white;
+    transition: all 0.2s ease-in;
+    box-shadow: 3px 3px 3px black;
+    z-index: 1;
+}
+/*.link-box:hover {
+    transform: rotate(5deg) scale(1.05);
+    background: linear-gradient(270deg, red, crimson);
+    box-shadow: 1px 1px 1px black;
+    border: 3px solid gold;
+}*/
+.link-box h1 {
+    margin-top: 40%;
+    font-family: 'Cedarville Cursive', cursive;
+    z-index: 1;
+    
+}
+.col-md-6 {
+    text-align: center;
+}
+
+.top {
+    margin-top: 20px;
+    /*margin-bottom: 20px;*/
+}
+.bottom {
+    /*margin-bottom: 10px;*/
+    /*margin-top: 20px;*/
+}
+.left {
+    margin-right: 350px;
+}
+
+.left:hover {
+    transform: rotate(-5deg) scale(1.05);
+    background: linear-gradient(270deg, red, crimson);
+    box-shadow: 1px 1px 1px black;
+    border: 3px solid gold;
+}
+
+.right {
+    margin-left: 350px;
+}
+.right:hover {
+    transform:  translateX(0px) translateY(0px) rotate(5deg) scale(1.05);
+    background: linear-gradient(270deg, red, crimson);
+    box-shadow: 1px 1px 1px black;
+    border: 3px solid gold;
+}
+
+#name-container {
+    position: relative;
+    text-align: center;
+    z-index: 0;
+}
+#name-header {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5em;
+    color: black;
+    display: inline-block;
+    transition: all 0.1s ease-in;
+    z-index: 0;
+    animation: textAppear 2s ease-out none;
+    margin-bottom: 0px;
+}
+
+#name-header:hover {
+    transform: scale(1.2);
+    text-shadow: 2px 2px 2px white;
+    z-index: 0;
+}
+
+#name-description {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    animation: textAppear 2s ease-out none;
+    display: inline-block;
+    z-index: 0;
+}
+#name-line {
+    width: 30%;
+    border: 1.2px solid white;
+    border-radius: 25%;
+    color: antiquewhite;
+}
+
+#portfolio {
+    animation: boxesMovePortfolio 1s ease-out none;
+    z-index: 1;
+}
+
+@keyframes boxesMovePortfolio {
+    0% {
+        transform: translateX(700px) translateY(500px);
+        /*margin-top: 500px;
+        margin-left: 600px;*/
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+        /*margin-right: 350px;
+        margin-top: 20px;
+        margin-bottom: 50px;*/
+    }
+}
+
+#writing {
+    animation: boxesMoveWriting 1s ease-out none;
+    z-index: 1;
+}
+
+@keyframes boxesMoveWriting {
+    0% {
+        /*margin-right: 600px;
+        margin-top: 500px;*/
+        transform: translateX(-700px) translateY(500px);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+#about {
+    animation: boxesMoveAbout 1s ease-out none;
+    z-index: 1;
+}
+
+@keyframes boxesMoveAbout {
+    0% {
+        transform: translateX(700px) translateY(-500px);
+        /*margin-left: 600px;*/
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+        /*margin-right: 350px;
+        margin-top: 30px;*/
+    }
+}
+
+#contact {
+    animation: boxesMoveContact 1s ease-out none;
+    z-index: 1;
+}
+
+@keyframes boxesMoveContact {
+    0% {
+        /*margin-right: 600px;*/
+        transform: translateX(-700px) translateY(-500px);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+        /*margin-left: 350px;
+        margin-top: 30px;*/
+    }
+}
+
+@keyframes textAppear {
+    0% {
+        color: transparent;
+    }
+    40% {
+        color: transparent;
+    }
+    60% {
+        color: black;
+    }
+    70% {
+        color: red;
+        transform: scale(1.05);
+    }
+    100% {
+        text-decoration: none;
+        transform: scale(1);
+        color: black;
+    }
+}
+
+@media (max-width: 991px) {
+    .right {
+        margin-left: 0px;
+        text-align: none;
+    }
+    .left {
+        margin-right: 0px;
+        text-align: none;
+    }
+    .bottom {
+        margin-bottom: 20px;
+    }
+}
