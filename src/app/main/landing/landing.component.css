@@ -1,14 +1,14 @@
 :host {
     display: block;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(45deg, lightskyblue, deepskyblue);
 }
 .main-container {
     position: relative;
 }
 .link-box {
-    height: 350px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
     background: linear-gradient(45deg, darkred, crimson);
     display: inline-block;
     color: white;
@@ -24,24 +24,24 @@
 }*/
 .link-box h1 {
     margin-top: 40%;
-    font-family: 'Cedarville Cursive', cursive;
-    z-index: 1;
-    
+    /*font-family: 'Cedarville Cursive', cursive;*/
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.7em;
 }
 .col-md-6 {
     text-align: center;
 }
 
 .top {
-    margin-top: 20px;
+    margin-top: 10%;
     /*margin-bottom: 20px;*/
 }
 .bottom {
-    /*margin-bottom: 10px;*/
+    margin-top: 7%;
     /*margin-top: 20px;*/
 }
 .left {
-    margin-right: 350px;
+    margin-right: 20%;
 }
 
 .left:hover {
@@ -52,7 +52,7 @@
 }
 
 .right {
-    margin-left: 350px;
+    margin-left: 20%;
 }
 .right:hover {
     transform:  translateX(0px) translateY(0px) rotate(5deg) scale(1.05);

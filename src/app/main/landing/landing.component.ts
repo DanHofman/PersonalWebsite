@@ -1,17 +1,23 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { changePageToPortfolio, changePageToWriting, changePageToAbout, changePageToContact } from './changePageAnimation';
+
+import { revealDescriptionTrigger } from './descriptionAppearAnimation';
 
 @Component({
   selector: 'dhws-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
   animations: 
-    [changePageToPortfolio, changePageToWriting, changePageToAbout, changePageToContact]
+    [changePageToPortfolio, changePageToWriting, changePageToAbout, changePageToContact, revealDescriptionTrigger]
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent {
   @ViewChild("portfolio") portfolioElement: ElementRef;
+  // @ViewChild("nameDescription") nameDescription: ElementRef;
+  descriptionRevealedState: string = 'hidden';
+
+  constructor(private router: Router, private renderer: Renderer2) { }
 
   linkStates: Object = 
     {portfolio: 'noChange',
@@ -33,9 +39,5 @@ export class LandingComponent implements OnInit {
     }, 500);
   }
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
 
 }

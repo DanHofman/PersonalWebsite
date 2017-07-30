@@ -17,9 +17,9 @@
     </div>
   </div>
   <div id="name-container" class="row">
-    <h1 id="name-header">DH</h1>
+    <h1 (mouseover)="descriptionRevealedState = 'revealed'" (mouseleave)="descriptionRevealedState = 'hidden'" id="name-header">DH</h1>
     <hr id="name-line">
-    <h4 id="name-description">Developer | Writer | Musician</h4>
+    <h4 [@revealDescriptionTrigger]="descriptionRevealedState" id="name-description">Developer | Writer | Musician</h4>
   </div>
   <div class="row">
     <div class="col-md-6">
