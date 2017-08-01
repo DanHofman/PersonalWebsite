@@ -7,7 +7,9 @@ export const revealDescriptionTrigger = trigger('revealDescriptionTrigger', [
         transform: 'translateX(10px)'
     })),
     state('revealed', style({
-        opacity: 1
+        opacity: 1,
+        color: 'black',
+        transform: 'translateX(0px)'
     })),
     transition('hidden => revealed', [
         animate('200ms', style({

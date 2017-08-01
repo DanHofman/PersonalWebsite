@@ -18,7 +18,7 @@
   </div>
   <div id="name-container" class="row">
     <h1 (mouseover)="descriptionRevealedState = 'revealed'" (mouseleave)="descriptionRevealedState = 'hidden'" id="name-header">DH</h1>
-    <hr id="name-line">
+    <hr [ngStyle]="{'border': descriptionRevealedState == 'revealed' ? '1.2px solid white' : '1.2px solid transparent', 'border-radius': '25%'}" id="name-line">
     <h4 [@revealDescriptionTrigger]="descriptionRevealedState" id="name-description">Developer | Writer | Musician</h4>
   </div>
   <div class="row">
