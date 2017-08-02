@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import { changePageToPortfolio, changePageToWriting, changePageToAbout, changePageToContact } from './changePageAnimation';
 
 import { revealDescriptionTrigger } from './descriptionAppearAnimation';
+import { lineTrigger } from './lineChangeAnimation';
 
 @Component({
   selector: 'dhws-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
   animations: 
-    [changePageToPortfolio, changePageToWriting, changePageToAbout, changePageToContact, revealDescriptionTrigger]
+    [changePageToPortfolio, changePageToWriting, changePageToAbout, changePageToContact, revealDescriptionTrigger, lineTrigger]
 })
 export class LandingComponent {
   @ViewChild("portfolio") portfolioElement: ElementRef;

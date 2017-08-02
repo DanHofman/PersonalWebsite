@@ -1,5 +1,5 @@
 <div class="container-fluid main-container">
-  <div class="row">
+  <div class="row top-row">
     <div class="col-md-6 text-center">
       <article 
         [@changePagePortfolio] = 'linkStates["portfolio"]'
@@ -7,29 +7,35 @@
         (click)="changePage('portfolio')"
         id="portfolio" 
         class="link-box top left">
-        <h1>portfolio</h1>
+        <h1><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>portfolio</h1>
       </article>
     </div>
     <div class="col-md-6">
       <article id="writing" class="link-box top right">
-        <h1>writing</h1>
+        <h1><i class="fa fa-pencil" aria-hidden="true"></i>writing</h1>
       </article>
     </div>
   </div>
-  <div id="name-container" class="row">
-    <h1 (mouseover)="descriptionRevealedState = 'revealed'" (mouseleave)="descriptionRevealedState = 'hidden'" id="name-header">DH</h1>
-    <hr [ngStyle]="{'border': descriptionRevealedState == 'revealed' ? '1.2px solid white' : '1.2px solid transparent', 'border-radius': '25%'}" id="name-line">
-    <h4 [@revealDescriptionTrigger]="descriptionRevealedState" id="name-description">Developer | Writer | Musician</h4>
+  <div  id="name-container" class="row">
+    <h1
+      (mouseover)="descriptionRevealedState = 'revealed'" 
+      (mouseleave)="descriptionRevealedState = 'hidden'" id="name-header">DH</h1>
+    <hr
+      [@lineTrigger]="descriptionRevealedState" 
+      id="name-line">
+    <h4 
+      [@revealDescriptionTrigger]="descriptionRevealedState"
+      id="name-description">Developer | Writer | Musician</h4>
   </div>
   <div class="row">
     <div class="col-md-6">
       <article id="about" class="link-box bottom left">
-        <h1>about</h1>
+        <h1><i class="fa fa-coffee" aria-hidden="true"></i>about</h1>
       </article>
     </div>
     <div class="col-md-6">
       <article id="contact" class="link-box bottom right">
-        <h1>contact</h1>
+        <h1><i class="fa fa-envelope-o" aria-hidden="true"></i>contact</h1>
       </article>
     </div>
   </div>
